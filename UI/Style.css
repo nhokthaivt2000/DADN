@@ -1,0 +1,424 @@
+*{
+    font-family: '.VnArial', Times, serif;
+    font-style: normal;
+    font-weight: 600;
+}
+body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #D96C8D;
+    z-index: -1;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.switch1{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    margin: 0 20px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.switch1 input {display: none}
+.slider:before{
+    position: absolute;
+    content: "";
+    top: 5px;
+    height: 50px;
+    width: 50px;
+    left: 5px;
+    right: 5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50px;
+}
+input:checked + .slider{
+    background-color: #05FF00;
+}
+input:checked + .slider:before{
+    transform: translateX(75%);
+}
+
+.k{
+    position: absolute;
+
+    height: 19px;
+    margin-left: 10%;
+    top: 70px;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 19px;
+    text-align: center;
+    color: #992E3D;
+
+}
+.w{
+    position: absolute;
+    width: 72px;
+    height: 19px;
+    margin-left: 10%;
+    top: 33px;
+
+    font-size: 30px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #F3F4F1;
+}
+.rec_20{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    left: 0px;
+    margin-top: 2%;
+    background: linear-gradient(180deg, rgba(239, 239, 239, 0.3) 0%, rgba(232, 135, 148, 0) 100%);
+    background-blend-mode: screen;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 38px 38px 0px 0px;
+}
+.bell{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 85%;
+    top: 30px;
+
+    border-radius: 50%;
+    background: #ec4c7c;
+}
+.Living_Room {
+    position: absolute;
+    margin-left: 5%;
+    top: 50px;
+
+    font-size: 50px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+.Devices{
+    position: absolute;
+    margin-left: 5%;
+    top: 100px;
+
+    font-size: 30px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.circle_green{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 10%;
+    top: 170px;
+
+    border-radius: 50%;
+    background: rgb(24, 195, 24);
+}
+.circle_green .container{
+    top: 120px;
+    left: 50%;
+}
+.circle_yellow{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    top: 170px;
+
+    border-radius: 50%;
+    background: yellow;
+}
+.circle_yellow .container{
+    top: 120px;
+    left: 50%;
+}
+.circle_purple{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 10%;
+    top: 370px;
+    border-radius: 50%;
+    background: #9E00FF ;
+}
+.circle_purple .container{
+    top: 120px;
+    left: 50%;
+}
+.circle_blue{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    top: 370px;
+    border-radius: 50%;
+    background: #00F0FF ;
+}
+.circle_blue .container{
+    top: 120px;
+    left: 50%;
+}
+.home_temperature{
+    position: absolute;
+    font-size: 40px;
+    line-height: 24px;
+    margin-left: 50%;
+    top: 50px;
+    color: #FFFFFF;
+}
+/*.circle_big{*/
+/*    position: absolute;*/
+/*    width: 240px;*/
+/*    height: 240px;*/
+/*    margin-left: 10%;*/
+/*    margin-top: 380px;*/
+/*    padding-bottom: 20px;*/
+/*    border-radius: 50%;*/
+/*    background: rgba(61, 21, 95, 0.8);*/
+/*}*/
+/*.circle_mid{*/
+/*    position: absolute;*/
+/*    width: 100px;*/
+/*    height:200px;*/
+/*    margin-left: 15%;*/
+/*    margin-top: -7%;*/
+/*    display: block;*/
+/*    box-sizing: border-box;*/
+/*    border: 20px solid #05FF00;*/
+
+
+/*    border-top-left-radius:100px;*/
+/*    border-bottom-left-radius:100px;*/
+/*    border-right: 0;*/
+/*    border-right-color: transparent;*/
+/*    transform: rotate(45deg);*/
+/*}*/
+/*.circle_mid2{*/
+
+/*    position: absolute;*/
+/*    width: 160px;*/
+/*    height: 160px;*/
+/*    margin-left: 16%;*/
+/*    margin-top: 16%;*/
+/*    border-radius: 50%;*/
+/*    background: #441869;*/
+/*}*/
+/*.circle_mid3{*/
+/*    position: absolute;*/
+/*    width: 110px;*/
+/*    height: 110px;*/
+/*    margin-left: 14%;*/
+/*    margin-top: 14%;*/
+
+/*    border-radius: 50%;*/
+/*    background: conic-gradient(from 180deg at 50% 50%, rgba(130, 53, 157, 0.892969) -3.99deg, #632977 59.25deg, rgba(54, 6, 71, 0.914283) 115.25deg, rgba(99, 7, 132, 0.854167) 168.98deg, rgba(67, 6, 88, 0.614583) 224.55deg, rgba(81, 20, 102, 0) 267.62deg, rgba(130, 53, 157, 0.892969) 356.01deg, #632977 419.25deg);*/
+/*}*/
+/*.circle_mid4{*/
+/*    position: absolute;*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*    margin-left: 37%;*/
+/*    margin-top: 37%;*/
+/*    border-radius: 50%;*/
+/*    background: #000000;*/
+/*    filter: blur(7px);*/
+/*!*}*!*/
+.cels{
+    position: absolute;
+    font-size: 25px;
+    margin-top: 8%;
+    margin-left: 35%;
+    color: white;
+}
+/*.temperature{*/
+/*    position: absolute;*/
+/*    margin-top: 45%;*/
+/*    margin-left: 13%;*/
+/*    color: rgba(255, 255, 255, 0.5);*/
+/*    font-size: 15px;*/
+/*}*/
+/*.rec{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+
+
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*    transform: rotate(135.47deg);*/
+/*}*/
+/*.rec2{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    margin-left: 95%;*/
+/*    top: 95%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*    transform: rotate(135.47deg);*/
+/*}*/
+/*.rec3{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    margin-left: 100%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*    transform: rotate(-134.53deg);*/
+/*}*/
+/*.rec4{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    margin-left: 5%;*/
+/*    top: 95%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*    transform: rotate(-134.53deg);*/
+/*}*/
+/*.rec5{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    top: 50%;*/
+/*    margin-left: 110%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*    transform: rotate(-89.65deg);*/
+/*}*/
+/*.rec6{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    margin-left: -10%;*/
+/*    top: 50%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*    transform: rotate(-89.65deg);*/
+/*}*/
+/*.rec7{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    left: 50%;*/
+/*    top: 105%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*}*/
+/*.rec8{*/
+/*    position: absolute;*/
+/*    width: 3px;*/
+/*    height: 15px;*/
+/*    left: 50%;*/
+/*    top: -10%;*/
+
+/*    background: #05FF00;*/
+/*    border-radius: 20px;*/
+/*}*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    margin-top: 25%;
+    margin-left: 35%;
+    cursor: pointer;
+  }
+
+  /*.switch input {*/
+  /*  opacity: 0;*/
+  /*  width: 0;*/
+  /*  height: 0;*/
+  /*}*/
+
+  /*.slider {*/
+  /*  position: absolute;*/
+  /*  cursor: pointer;*/
+  /*  top: 0;*/
+  /*  left: 0;*/
+  /*  right: 0;*/
+  /*  bottom: 0;*/
+  /*  background-color: #ccc;*/
+  /*  -webkit-transition: .4s;*/
+  /*  transition: .4s;*/
+  /*}*/
+
+  /*.slider:before {*/
+  /*  position: absolute;*/
+  /*  content: "ON";*/
+  /*    ;*/
+
+  /*  height: 26px;*/
+  /*  width: 50px;*/
+  /*  left: 4px;*/
+  /*  bottom: 4px;*/
+  /*  background-color: #05FF00;*/
+  /*  -webkit-transition: .4s;*/
+  /*  transition: .4s;*/
+  /*}*/
+
+  /*input:checked + .slider {*/
+  /*  background-color: #ec4c7c;*/
+  /*}*/
+
+  /*input:focus + .slider {*/
+  /*  box-shadow: 0 0 1px #ec4c7c;*/
+  /*}*/
+
+  /*input:checked + .slider:before {*/
+  /*  -webkit-transform: translateX(26px);*/
+  /*  -ms-transform: translateX(26px);*/
+  /*  transform: translateX(42px);*/
+  /*}*/
+
+  /*!* Rounded sliders *!*/
+  /*.slider.round {*/
+  /*  border-radius: 34px;*/
+  /*}*/
+
+  /*.slider.round:before {*/
+  /*  border-radius: 40px;*/
+  /*}*/
+.left{
+    position: absolute;
+
+    height: 22px;
+    margin-top: -15%;
+    margin-left: 45%;
+
+    font-size: 30px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.left2{
+    position:absolute;
+    margin-left: 70%;
+    margin-top: -17%;
+    font-size: 30px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
