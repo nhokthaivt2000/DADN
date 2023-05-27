@@ -509,3 +509,12 @@
   align-items: flex-start;
   flex-shrink: 1;
 }
+.homepage-back {
+  /*scale: 10%;*/
+  color: white;
+  top: 0px;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
