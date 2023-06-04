@@ -99,11 +99,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 var currentTime = new Date();
+function randomInt(){
+    return Math.floor(Math.random() * 20 + 15);
+}
+
 setInterval(() => {    
     currentTime = new Date();
-    console.log(currentTime.getMinutes());
-    console.log(currentTime.getMinutes() % 5);
-    if ((currentTime.getMinutes() % 5 == 0 && (((currentTime.getHours() < 10) ? "0" : "") + currentTime.getHours() + ":" + ((currentTime.getMinutes() < 10) ? "0" : "") + currentTime.getMinutes()) != label[5])
+    // console.log(currentTime.getMinutes());
+    // console.log(currentTime.getMinutes() % 5);
+    if ((currentTime.getMinutes() % 2 == 0 && (((currentTime.getHours() < 10) ? "0" : "") + currentTime.getHours() + ":" + ((currentTime.getMinutes() < 10) ? "0" : "") + currentTime.getMinutes()) != label[5])
         || !(currentTime.getHours() == label[5].substring(0, 2) && currentTime.getMinutes() - label[5].substring(3) <= 5)) {
         label.shift();
         label.push(((currentTime.getHours() < 10) ? "0" : "") + currentTime.getHours() + ":" + ((currentTime.getMinutes() < 10) ? "0" : "") + currentTime.getMinutes());
@@ -111,10 +115,28 @@ setInterval(() => {
     
     $.getJSON("https://io.adafruit.com/api/v2/hjilklong/feeds/bbc-temp", function (data) {
         dataTemp[5] = data.last_value;
+        if (data.last_value >= 50) alert("RUN");
     });
-
+    // $.ajax({
+    //     url: "https://io.adafruit.com/api/v2/hjilklong/feeds/bbc-temp/data",
+    //     dataType: "json",
+    //     type: "post",
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Content-Type': 'application/json',
+    //         'X-AIO-Key': 'aio_ZbXm45LILMmxcpivwARIInsM1MzZ'
+    //     },
+    //     data: JSON.stringify({ "value": randomInt() }),
+    //     processData: false,
+    //     success: function (data, textStatus, jQxhr) {
+    //         //alert('ONN');
+    //     },
+    //     error: function (jQxhr, textStatus, errorThrown) {
+    //         console.log(errorThrown);
+    //     },
+    // });
     b.update();
-}, 5000);
+}, 1000);
 // var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 // var d = new Date().getDay();
 // console.log(d);

@@ -158,6 +158,7 @@ setInterval(() => {
     
     $.getJSON("https://io.adafruit.com/api/v2/hjilklong/feeds/bbc-gas", function (data) {
         dataGas[5] = data.last_value;
+        if (data.last_value >= 50) alert("RUN");
         // a.data.dataGasets[0].data[b.data.labels.indexOf(day[d])] = Math.floor(Math.random() * 50);
     });
     // console.log(a.data.dataGasets[0].data[a.data.labels.indexOf(day[d])]);
