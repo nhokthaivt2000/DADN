@@ -38,6 +38,7 @@
       data-tag="font"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div>
@@ -84,10 +85,10 @@
             />
           </div>
           <div class="homepage-statistic">
-            <span class="homepage-text">27℃</span>
+            <span class="homepage-text" id="temp">27℃</span>
             <span class="homepage-text01"><span>Temperature</span></span>
             <span class="homepage-text03"><span>Gas</span></span>
-            <span class="homepage-text05">36PPM</span>
+            <span class="homepage-text05" id="gas">36PPM</span>
             <img
               alt="Line14179"
               src="public/external/line14179-lrv.svg"
@@ -167,7 +168,7 @@
             <span class="homepage-text12"><span>Open/Close</span></span>
             <div class="homepage-button">
               <label class="switch">
-                <input type="checkbox" checked>
+                <input type="checkbox" id="door" onclick="Door()" checked>
                 <span class="slider"></span>
               </label>
             </div>
@@ -257,7 +258,7 @@
 
             <div class="homepage-button">
               <label class="switch">
-                <input type="checkbox" checked>
+                <input type="checkbox" id="light" onclick="Light()" checked>
                 <span class="slider"></span>
               </label>
             </div>
@@ -265,5 +266,6 @@
         </div>
       </div>
     </div>
+    <script src="./controller.js"></script>
   </body>
 </html>

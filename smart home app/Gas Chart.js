@@ -1,33 +1,33 @@
 var a;
-// var datasGas = [() => {
+// var dataGas = [() => {
 //     for (var i = 0; i < 6; i++){
 //         var a = new Date();
 //         a.setMinutes(a.getMinutes() - i * 5);
 
 //     }
 // }];
-var datasGas = [];
+var dataGas = [];
 var labelGas = [];
 setTimeout(() => {
     $.getJSON("https://io.adafruit.com/api/v2/hjilklong/feeds/bbc-gas/data", function (data) {
         console.log(data);
         for (var i = 0; i < 12; i++) {
-            datasGas.push(+data[i].value);
+            dataGas.push(+data[i].value);
             var q = new Date(data[i].created_at);
             labelGas.push(((q.getHours() < 10) ? "0" : "") + q.getHours() + ":" + ((q.getMinutes() < 10) ? "0" : "") + q.getMinutes());
         }
-        datasGas.reverse();
+        dataGas.reverse();
         labelGas.reverse();
     });
     
-    console.log(datasGas);
+    console.log(dataGas);
     console.log(labelGas);
-    // datasGas.reverse();
+    // dataGas.reverse();
     // labelGas.reverse();
     a.update();
 },1);
 
-// console.log(datasGas);
+// console.log(dataGas);
 // console.log(new Date());
 // console.log(new Date().toLocaleString("vi", { TimeZone: "Vietnam" }));
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     backgroundColor: gradient,
                     borderColor: '#F4A460',
                     tension: 0.4,
-                    data: datasGas,
+                    data: dataGas,
                 },
             ],
         },
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 // var d = new Date().getDay();
 // console.log(d);
-// console.log(a.data.datasGasets[0].data);
+// console.log(a.data.dataGasets[0].data);
 // setTimeout(function () {
 //     if (day[d] != a.data.labels[6]) {
 //         for (var i = 1; i <= d; i++) {
@@ -157,27 +157,27 @@ setInterval(() => {
     }
     
     $.getJSON("https://io.adafruit.com/api/v2/hjilklong/feeds/bbc-gas", function (data) {
-        datasGas[5] = data.last_value;
-        // a.data.datasGasets[0].data[b.data.labels.indexOf(day[d])] = Math.floor(Math.random() * 50);
+        dataGas[5] = data.last_value;
+        // a.data.dataGasets[0].data[b.data.labels.indexOf(day[d])] = Math.floor(Math.random() * 50);
     });
-    // console.log(a.data.datasGasets[0].data[a.data.labels.indexOf(day[d])]);
-    // console.log(a.data.datasGasets[0].data[a.data.labels.indexOf('Fri')]);
+    // console.log(a.data.dataGasets[0].data[a.data.labels.indexOf(day[d])]);
+    // console.log(a.data.dataGasets[0].data[a.data.labels.indexOf('Fri')]);
     // console.log(a.data.labels);
     a.update();
 }, 5000);
 
 // function addData(chart, label, data) {
 //     chart.data.labels.push(label);
-//     chart.data.datasGasets.forEach((datasGaset) => {
-//         datasGaset.data.push(data);
+//     chart.data.dataGasets.forEach((dataGaset) => {
+//         dataGaset.data.push(data);
 //     });
 //     chart.update();
 // }
 
 // function removeData(chart) {
 //     chart.data.labels.pop();
-//     chart.data.datasGasets.forEach((datasGaset) => {
-//         datasGaset.data.pop();
+//     chart.data.dataGasets.forEach((dataGaset) => {
+//         dataGaset.data.pop();
 //     });
 //     chart.update();
 // }
