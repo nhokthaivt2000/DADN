@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Smart Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.12/dist/default/lib.umd.js"
+      ></script>
+      <link href="./homepage.css" rel="stylesheet" />
+
+      <div class="homepage-container">
+        <div class="homepage-frame1">
+          <img
+            alt="image74118"
+            src="public/external/image74118-rnie-500h.png"
+            class="homepage-homepage"
+          />
+          <div class="homepage-home-indicator">
+            <img
+              alt="HomeIndicator4120"
+              src="public/external/homeindicator4120-2nj-200h.png"
+              class="homepage-home-indicator1"
+            />
+          </div>
+          <div class="homepage-tabbar">
+            <img
+              alt="home"
+              src="public/external/home.svg"
+              class="homepage-home"
+            />
+            <img
+              alt="search"
+              src="public/external/search.svg"
+              class="homepage-search"
+            />
+            <img
+              alt="grid"
+              src="public/external/grid.svg"
+              class="homepage-grid"
+            />
+            <img
+              alt="user"
+              src="public/external/user1192-r4h.svg"
+              class="homepage-user"
+            />
+          </div>
+          <div class="homepage-statistic">
+            <span class="homepage-text" id="temp">27℃</span>
+            <span class="homepage-text01"><span>Temperature</span></span>
+            <span class="homepage-text03"><span>Gas</span></span>
+            <span class="homepage-text05" id="gas">36PPM</span>
+            <img
+              alt="Line14179"
+              src="public/external/line14179-lrv.svg"
+              class="homepage-line1"
+            />
+            <a href="details.html" class="homepage-text06">
+              <span>More Details...</span>
+            </a>
+            <img
+              alt="Vector1239"
+              src="public/external/vector1239-1vll.svg"
+              class="homepage-vector"
+            />
+            <img
+              alt="Vector1229"
+              src="public/external/vector1229-8t9.svg"
+              class="homepage-vector1"
+            />
+          </div>
+          <div class="homepage-nav-bar">
+            <span class="homepage-text08"><span>Device</span></span>
+            <img
+              alt="bell"
+              src="public/external/bell4184-mov4.svg"
+              class="homepage-bell"
+            />
+            <a href="signin.html" class="homepage-back">Logout</a>
+          </div>
+          <div class="homepage-status-bar">
+            <div class="homepage-i-phone-xornewer">
+              <div class="homepage-right-side">
+                <div class="homepage-battery">
+                  <img
+                    alt="Rectangle4196"
+                    src="public/external/rectangle4196-d66k.svg"
+                    class="homepage-rectangle"
+                  />
+                  <img
+                    alt="CombinedShape4197"
+                    src="public/external/combinedshape4197-2mk.svg"
+                    class="homepage-combined-shape"
+                  />
+                  <img
+                    alt="Rectangle"
+                    src="public/external/rectangle.svg"
+                    class="homepage-rectangle1"
+                  />
+                </div>
+                <img
+                  alt="Wifi"
+                  src="public/external/wifi.svg"
+                  class="homepage-wifi"
+                />
+                <img
+                  alt="MobileSignal"
+                  src="public/external/mobilesignal.svg"
+                  class="homepage-mobile-signal"
+                />
+              </div>
+              <div class="homepage-left-side">
+                <img
+                  alt="Time"
+                  src="public/external/time.svg"
+                  class="homepage-time"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="homepage-door">
+            <img
+              alt="door"
+              src="public/door-200w.png"
+              loading="eager"
+              class="homepage-door1"
+            />
+            <span class="homepage-text10"><span>DOOR</span></span>
+            <span class="homepage-text12"><span>Open/Close</span></span>
+            <div class="homepage-button">
+              <label class="switch">
+                <input type="checkbox" id="door" onclick="Door()" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="homepage-camera">
+            <div class="homepage-camera1">
+              <img
+                alt="camera1218"
+                src="public/camera-200h.png"
+                class="homepage-camera2"
+              />
+              <span class="homepage-text14"><span>CAMERA</span></span>
+            </div>
+            <div class="homepage-div">
+              <dangerous-html
+                html="<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+</head>
+
+<body>
+    <div style='width:100%;margin: auto;'>
+        <video id='video' autoplay playsinline muted></video>
+    </div>
+    <div style='position: absolute; margin-left: 20%; top: 110px'>
+        <button class='btn btn-primary' id='start'> Start</button>
+        <button class='btn btn-secondary' id='stop'> Stop</button>
+    </div>
+    <script type='text/javascript'>
+        const videoElem = document.getElementById('video');
+        const startElem = document.getElementById('start');
+        const stopElem = document.getElementById('stop');
+        // Options for getDisplayMedia()
+        var displayMediaOptions = {
+            video: {
+                cursor: 'always',
+                width: 190
+            },
+            audio: false
+        };
+        // Set event listeners for the start and stop buttons
+        startElem.addEventListener('click', function (evt) {
+            startCapture();
+        }, false);
+        stopElem.addEventListener('click', function (evt) {
+            stopCapture();
+        }, false);
+        async function startCapture() {
+            try {
+                videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+                dumpOptionsInfo();
+            } catch (err) {
+                console.error('Error: ' + err);
+            }
+        }
+
+        function stopCapture(evt) {
+            let tracks = videoElem.srcObject.getTracks();
+            tracks.forEach(track => track.stop());
+            videoElem.srcObject = null;
+        }
+
+        function dumpOptionsInfo() {
+            const videoTrack = videoElem.srcObject.getVideoTracks('0');
+            console.info('Track settings:');
+            console.info(JSON.stringify(videoTrack.getSettings(), null, 2));
+            console.info('Track constraints:');
+            console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
+        }
+    </script>
+</body>
+</html>"
+              ></dangerous-html>
+            </div>
+          </div>
+          <div class="homepage-light">
+            <span class="homepage-text16"><span>LED LIGHT</span></span>
+            <span class="homepage-text18"><span>On/Off</span></span>
+            <img
+              alt="image91203"
+              src="public/light-200h.png"
+              class="homepage-light1"
+            />
+
+            <div class="homepage-button">
+              <label class="switch">
+                <input type="checkbox" id="light" onclick="Light()" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./controller.js"></script>
+  </body>
+</html>
