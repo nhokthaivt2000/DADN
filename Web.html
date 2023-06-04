@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="favicon1.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Đồ Án Đa Ngành</title>
+</head>
+<body>
+        <img class="user" src="user.png" alt="user" style="margin-left: 5%;width: 70px;height: 70px;margin-top: 25px">
+        <div class="k">User</div>
+        <div class="w">Welcome</div>
+        <div class="bell"><div class="fa fa-bell" style="font-size: 40px;color: white;margin-top: 10px;margin-left: 10px;"></div></div>
+        <div class="rec_20">
+            <div class="Living_Room">Department</div>
+            <div class="Devices">4 Devices on</div>
+            <div class="circle_green"><img src="door.png" alt="door" style="width:50px;height:50px;margin-top: 10px;margin-left: 10px;">
+                <div class="container">
+                    <label class="switch1">
+                        <input type="checkbox" onclick="opened()" id="remember">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="circle_yellow"><img src="sun.svg" alt="sun" style="width:50px;height:50px;margin-top: 10px;margin-left: 10px;">
+                <div class="container">
+                    <label class="switch1">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div></div>
+            <div class="circle_purple"><img src="computer.svg" alt="computer" style="width:50px;height:50px;margin-top: 10px;margin-left: 10px;">
+                <div class="container">
+                    <label class="switch1">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div></div>
+            <div class="circle_blue"><img src="router.png" alt="router" style="width:50px;height:50px;margin-top: 10px;margin-left: 10px;">
+                <div class="container">
+                    <label class="switch1">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div></div>
+            <div class="home_temperature">Home Statistics</div>
+<!--            <div class="circle_big">-->
+<!--                <div class="rec"></div>-->
+<!--                <div class="rec2"></div>-->
+<!--                <div class="rec3"></div>-->
+<!--                <div class="rec4"></div>-->
+<!--                <div class="rec5"></div>-->
+<!--                <div class="rec6"></div>-->
+<!--                <div class="rec7"></div>-->
+<!--                <div class="rec8"></div>-->
+<!--                <div class="circle_mid"></div>-->
+<!--                <div class="circle_mid2">-->
+<!--                    <div class="circle_mid3">-->
+<!--                        <div class="circle_mid4"></div>-->
+<!--                        <div class="cels">25°C</div>-->
+<!--                        <div class="temperature">Temperature</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <label class="switch">
+            </label>
+            <div class="left">
+                <div class="text">Temp: <p style="display: inline" id="Nhiet_do">25</p>&#8451</div>
+            </div>
+            <div class="left1">
+                <div class="text" id="Do_am">Gas: 25&#8451</div>
+            </div>
+            <div class="left2">
+                <div class="cels">
+                    <img src="flame.png" alt="flame" class="icon">
+                    <p class="text2">Heating: 24&#8451</p>
+                </div>
+                <div class="cels">
+                    <img src="cool.png" alt="cool" class="icon">
+                    <p class="text2">Cooling: 18&#8451</p>
+                </div>
+                <div class="cels">
+                    <img src="wind.png" alt="wind" class="icon">
+                    <p class="text2">Airwave: 20&#8451</p>
+                </div>
+            </div>
+        </div>
+        <script src="controller.js">
+            while (true) {
+            setInterval(() => {
+                $.getJSON("https://io.adafruit.com/api/v2/jackson300802/feeds/bbc-led", function (data) {
+                    console.log(data.last_value);
+                    document.getElementById("Nhiet_do").innerHTML = data.last_value
+                })
+            }, 10000);
+            }
+        </script>
+</body>
+</html>
