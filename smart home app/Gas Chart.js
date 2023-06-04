@@ -11,7 +11,7 @@ var labelGas = [];
 setTimeout(() => {
     $.getJSON("https://io.adafruit.com/api/v2/hjilklong/feeds/bbc-gas/data", function (data) {
         console.log(data);
-        for (var i = 0; i < 12; i++) {
+        for (var i = 0; i < 6; i++) {
             dataGas.push(+data[i].value);
             var q = new Date(data[i].created_at);
             labelGas.push(((q.getHours() < 10) ? "0" : "") + q.getHours() + ":" + ((q.getMinutes() < 10) ? "0" : "") + q.getMinutes());
